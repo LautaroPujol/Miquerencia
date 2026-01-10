@@ -1,8 +1,8 @@
-import React from 'react'
+import "./Cards.css"
 
 const Cards = () => {
   return (
-    <p>Hola soy una card</p>
+    <div>Cards</div>
   )
 }
 

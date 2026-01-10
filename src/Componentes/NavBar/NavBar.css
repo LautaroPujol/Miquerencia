@@ -1,0 +1,20 @@
+header, ul{ 
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    background-color: rgb(100, 36, 36);
+
+   
+} 
+
+
+li {
+     display: inline-block;
+     padding-top: 10px;
+     cursor: pointer;
+}
+
+.ImgLogo {
+    height: 60px;
+    padding-left: 10px;
+}

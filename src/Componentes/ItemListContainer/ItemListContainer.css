@@ -1,0 +1,12 @@
+.ItemListflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.TextoItem {
+    display: flex;
+    padding: 20px;
+    color: white;
+}
