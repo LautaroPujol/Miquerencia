@@ -1,5 +1,5 @@
 import "./CartWidget.css"
-import ImagenCarritoCompra from "../../assets/Imagenes/ImagenCarritoCompra.png"
+import ImagenCarritoCompra from "../../../public/Imagenes/ImagenCarritoCompra.png"
 
 
 

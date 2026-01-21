@@ -1,6 +1,6 @@
 import "./NavBar.css"
 import CartWidget from '../CartWidget/CartWidget'
-import LogoMiQuerencia from "../../assets/Imagenes/LogoMiQuerencia.png"
+import LogoMiQuerencia from "../../../public/Imagenes/LogoMiQuerencia.png"
 
 
 const NavBar = () => {
@@ -11,7 +11,7 @@ const NavBar = () => {
                 <ul>
                     <li> Herramientas</li>
                     <li> Bulones</li>
-                    <li> Electrico</li>
+                    <li> Electronica</li>
                 </ul>
             </nav>
             <CartWidget />
