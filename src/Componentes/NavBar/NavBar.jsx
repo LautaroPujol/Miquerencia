@@ -1,17 +1,20 @@
 import "./NavBar.css"
 import CartWidget from '../CartWidget/CartWidget'
 import LogoMiQuerencia from "../../../public/Imagenes/LogoMiQuerencia.png"
+import { Link,} from "react-router-dom"
 
 
 const NavBar = () => {
     return (
         <header>
+            <Link to="/"> 
             <img className="ImgLogo" src={LogoMiQuerencia} alt="Logo de Miquerencia" />
-            <nav>
+            </Link>
+            <nav className="navbar">
                 <ul>
-                    <li> Herramientas</li>
-                    <li> Bulones</li>
-                    <li> Electronica</li>
+                    <li> 
+                        <Link to="/categoria/Herramientas">Herramientas</Link></li>
+                    <li> <Link to="/categoria/Electronica">Electronica</Link></li>
                 </ul>
             </nav>
             <CartWidget />

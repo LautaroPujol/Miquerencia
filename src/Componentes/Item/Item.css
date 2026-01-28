@@ -2,9 +2,15 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 2rem;
+    color: #fafafa;
 }
 
 .ImgCatalogo {
     width: 300px;
-
+}
+.button-card {
+    background-color: #FF8C00;
+    width: 50%;
+   border: 1rem black;
+   border-radius: 0.5rem;
 }
