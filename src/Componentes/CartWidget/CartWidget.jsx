@@ -1,5 +1,5 @@
 import "./CartWidget.css"
-import ImagenCarritoCompra from "../../../public/Imagenes/ImagenCarritoCompra.png"
+
 
 
 
@@ -7,7 +7,7 @@ const CartWidget = () => {
  
   return (
     <div >
-     <img className="imgCarrito" src={ImagenCarritoCompra} alt="Imagen carrito de compras" />
+     <img className="imgCarrito" src= "/Imagenes/ImagenCarritoCompra.png" alt="Imagen carrito de compras" />
     </div>
   )
 }

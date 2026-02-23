@@ -2,7 +2,7 @@
 import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import { useState, useEffect } from "react"
-import { getProductos, getProductoPorCategoria } from "../../asyncmock"
+import { getProductos, getProductoPorCategoria,} from "../../asyncmock"
 import { useParams } from "react-router-dom"
 
 
@@ -25,7 +25,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <h2 className="TextoItem">Mis Productos</h2>
+      <h2 className="TextoItem"></h2>
       <ItemList productos={productos} />
     </div>
   )

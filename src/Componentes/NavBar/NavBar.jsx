@@ -1,6 +1,5 @@
 import "./NavBar.css"
 import CartWidget from '../CartWidget/CartWidget'
-import LogoMiQuerencia from "../../../public/Imagenes/LogoMiQuerencia.png"
 import { Link,} from "react-router-dom"
 
 
@@ -8,7 +7,7 @@ const NavBar = () => {
     return (
         <header>
             <Link to="/"> 
-            <img className="ImgLogo" src={LogoMiQuerencia} alt="Logo de Miquerencia" />
+            <img className="ImgLogo" src="/Imagenes/LogoMiQuerencia.png" alt="Logo de Miquerencia" />
             </Link>
             <nav className="navbar">
                 <ul>
