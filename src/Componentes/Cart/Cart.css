@@ -1,0 +1,33 @@
+h2,
+h3,
+h4,
+p {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.separacion {
+    margin-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    gap: 2rem;
+}
+
+.volveralatienda {
+    background-color: #FF8C00;
+    margin-left: 10px;
+    border: 1rem black;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.volveralatienda:hover {
+    color: #b4b4b4;
+    transition: 0.3s;
+}
+
+a {
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}

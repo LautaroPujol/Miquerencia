@@ -13,40 +13,41 @@ export const CarritoProvider = ({ children }) => {
     const [CantidadTotal, setCantidadTotal] = useState(0)
 
     console.log(carrito)
-    
+
     //Funciones auxiliares para el carrito
 
     //Función 1: Agregar la cantidad al carrito 
     const agregarAlCarrito = (item, cantidad) => {
-        const productoExistente = carrito.find(producto => producto.id === item.id)
-        if (!productoExistente){
-            setCarrito ([...carrito, { ...item, cantidad }])
-            setCantidadTotal (prev=> prev + cantidad)
-            setTotal (prev => prev + (item.precio * cantidad))
+        // Buscamos usando producto.item.id
+        const productoExistente = carrito.find(producto => producto.item.id === item.id)
+
+        if (!productoExistente) {
+            setCarrito([...carrito, { item, cantidad }])
+            setCantidadTotal(prev => prev + cantidad)
+            setTotal(prev => prev + (item.Precio * cantidad))
         } else {
             const carritoActualizado = carrito.map(prod => {
-                if (prod.id === item.id){
-                    return {...prod, cantidad: prod.cantidad + cantidad}
+                // Comparamos usando prod.item.id
+                if (prod.item.id === item.id) {
+                    return { ...prod, cantidad: prod.cantidad + cantidad }
                 } else {
                     return prod
                 }
             })
-            setCarrito (carritoActualizado)
+            setCarrito(carritoActualizado)
             setCantidadTotal(prev => prev + cantidad)
-            setTotal(prev => prev + (item.precio * cantidad))
+            setTotal(prev => prev + (item.Precio * cantidad))
         }
-    } // <-- ACÁ ESTABA LA LLAVE EXTRA QUE BORRAMOS
-
-    //Funcion para eliminar el producto del carrito
-    const productoEliminado = (id) => {
-        const productoEliminado = carrito.find (producto => producto.item.id === id)
-        const carritoActualizado = carrito.filter (producto => producto.item.id !== id)
-
-        setCarrito(carritoActualizado)
-        setCantidadTotal (prev => prev - productoEliminado.cantidad)
-        setTotal (prev => prev - (productoEliminado.item.precio * productoEliminado.cantidad))
     }
 
+    //Funcion para eliminar el producto del carrito
+    const eliminarProducto = (id) => {
+        const productoEliminado = carrito.find(producto => producto.item.id === id)
+        const carritoActualizado = carrito.filter(producto => producto.item.id !== id)
+        setCarrito(carritoActualizado)
+        setCantidadTotal(prev => prev - productoEliminado.cantidad)
+        setTotal(prev => prev - (productoEliminado.item.Precio * productoEliminado.cantidad))
+    }
     //Funcion para vaciar carrito
     const vaciarCarrito = () => {
         setCarrito([])
@@ -55,7 +56,7 @@ export const CarritoProvider = ({ children }) => {
     }
 
     return (
-        <CarritoContext.Provider value={{ carrito, total, CantidadTotal, agregarAlCarrito, productoEliminado, vaciarCarrito }}>
+        <CarritoContext.Provider value={{ carrito, total, CantidadTotal, agregarAlCarrito, eliminarProducto, vaciarCarrito }}>
             {children}
         </CarritoContext.Provider>
     )

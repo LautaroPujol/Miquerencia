@@ -1,6 +1,6 @@
 .ItemDetail {
     margin: 0 auto;
-    color: white;
+    color: rgb(0,0,0);
     text-align: center;
     width: 50%;
 
@@ -18,7 +18,7 @@
 
 .accion {
     text-decoration: none;
-    color: white;
+    color: rgb(0,0,0);
     font-weight: bold;
     margin-top: 2rem;
     background-color: #FF8C00;

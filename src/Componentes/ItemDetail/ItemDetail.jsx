@@ -6,24 +6,24 @@ import { CarritoContext } from "../../Context/Carritocontext"
 import { useContext } from "react"
 
 
-const ItemDetail = ({ id, Nombre, Precio, Img, stock }) => {
+const ItemDetail = ({ id, Nombre, Precio, Img, stock, descripcion }) => {
 
   const [agregarCantidad, setAgregarCantidad] = useState(0);
-  const {agregarAlCarrito} = useContext(CarritoContext)
+  const { agregarAlCarrito } = useContext(CarritoContext)
 
   const manejarCantidad = (cantidad) => {
-    console.log("Se agrego al carrito la cantidad de: " + cantidad)
     setAgregarCantidad(cantidad);
+    const item = { id, Nombre, Precio }
+    agregarAlCarrito(item, cantidad)
   }
-  const item= {id, Nombre, Precio}
-  agregarAlCarrito(item, agregarCantidad)
+
 
   return (
     <div className="ItemDetail">
       <h2>{Nombre}</h2>
       <p>Precio: {Precio}</p>
       <img src={Img} alt={Nombre} />
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel minus, quam quisquam, velit officia obcaecati quaerat sint hic est optio, excepturi inventore. Voluptatibus nemo eius ipsum rerum vero accusantium ea!</p>
+      <p>{descripcion}</p>
       <div className="AccionesPostCompra">
         {
           agregarCantidad > 0 ? (

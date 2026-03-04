@@ -1,0 +1,57 @@
+.checkoutflex{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+    gap: 20px;
+}
+
+.button-check {
+    background-color: #FF8C00;
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.input-check {
+    background-color: #FF8C00;
+}
+.label-check {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.fincom {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.error-mensaje {
+    font-weight: bold;
+    color: red;
+}
+
+.forn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.resumen-compra {
+    flex: 1;
+    border-left: 2px solid #ccc;
+    padding-left: 40px;
+    font-weight: bold;
+    color:  rgb(0, 0, 0);
+}
+.mgb {
+    margin-bottom: 20px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.fl {
+    flex: 1;
+}

@@ -1,0 +1,20 @@
+.acci {
+    background-color: #FF8C00;
+    color: rgb(0, 0, 0);
+    border: 1rem black;
+    border-radius: 0.5rem;
+    padding: 8px;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    
+}
+.mgl {
+   margin-left: 10px;
+   margin-top: 10px;
+}
+
+.acci:hover {
+    color: #b4b4b4;
+    transition: 0.3s;
+}
+
